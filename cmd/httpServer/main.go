@@ -14,8 +14,8 @@ func main() {
 	userHandler := userHandler.NewHTTPHandler(userService)
 
 	router := gin.New()
-	router.GET("/games/:id", userHandler.Get)
-	router.POST("/games", userHandler.Create)
+	router.GET("/user/:id", userHandler.Get)
+	router.POST("/user", userHandler.Create)
 
 	router.Run(":8080")
 }
